@@ -1,38 +1,199 @@
+body {
+  background: url(food.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+.button-add {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  margin-bottom: 15px;
+}
+
+.button-add span {
+  padding-bottom: 7px;
+  font-size: 12px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.button-add svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.button-add:hover svg {
+  transform: translateX(0);
+}
+
+.button-add:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.button-add:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btnDeleteCont {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: auto;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.button-delete {
+  background: none;
+  border: none;
+}
+
+.MyListHeading {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.MyListPar {
+  font-size: 14px;
+  font-style: italic;
+}
+
+.MyListH1 {
+  font-weight: 400;
+  font-size: 40px;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+.dayTitle {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dayMeals {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.whole-plan {
+  width: 50%;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.meal-editing {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+label {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  align-self: start;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.myInput {
+  background-color: #E9EFEC;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Kalam", cursive;
+  letter-spacing: 2px;
+  font-size: 18px;
+  border: 2px solid #B7B7B7;
+  outline: none;
+}
+
+.myInput:hover {
+  background: linear-gradient(94deg, rgba(233,239,236,1) 0%, rgba(201,233,210,1) 100%);
+}
+
+textarea {
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: #E9EFEC;
+  border: 2px solid #B7B7B7;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  font-family: "Kalam", cursive;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-style: normal;
+  outline: none;
+}
+
+textarea:hover {
+  background: linear-gradient(94deg, rgba(233,239,236,1) 0%, rgba(201,233,210,1) 100%);
+}
+
+.myInput, textarea {
+  margin-top: 7px;
+  margin-bottom: 25px;
+}
+
+.selected, .default {
+  margin: 3px;
+  padding-left: 5px;
+  border: 2px solid #B7B7B7;
+  min-height: 85px;
+  position: relative;
+}
+
+.selected {
+  background: linear-gradient(94deg, rgba(233,239,236,1) 0%, rgba(201,233,210,1) 100%);
+}
+
+.default {
+  background-color: #F5F5F7;
+}
+
+.default:hover {
+  background-color: #E9EFEC;
+}
+
+.parDefault {
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  width: 50%;
+  margin-top: 35px;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: italic;
 }
