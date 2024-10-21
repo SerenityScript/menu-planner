@@ -22,7 +22,6 @@ function App() {
       ingredients: ""
     }
     setMealPlans([newMeal, ...mealPlans])
-    console.log(newMeal)
   }
 
   const deleteDay = (mealId) => {
@@ -45,6 +44,7 @@ function App() {
 
   return (
     <div className="App">
+
       <MyList
         addMeal={addMeal}
         mealPlans={mealPlans}
