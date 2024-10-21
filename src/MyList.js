@@ -28,7 +28,7 @@ const MyList = ({ addMeal, mealPlans, deleteDay, selectedDay, setSelectedDay }) 
         </svg>
       </button>
     </div>
-    
+
     <div>
       {mealPlans.map(({ title, id, mealForADay }) => (
         <div key={id}
@@ -36,9 +36,9 @@ const MyList = ({ addMeal, mealPlans, deleteDay, selectedDay, setSelectedDay }) 
           onClick={() => setSelectedDay(id)}
         >
           <p className="dayTitle">{title}</p>
-          <p className="dayMeals">{mealForADay.substring(0, 35)}</p>
+          <p className="dayMeals">{mealForADay.substring(0, 20)+"..."}</p>
           <div className='btnDeleteCont'>
-            <button className="button-delete" onClick={() => deleteDay(id)}><img src={deleteImg} alt='Trash' width='12px' /></button>
+            <button className="button-delete" onClick={() => deleteDay(id)}><img src={deleteImg} className='iconTrash' alt='Trash' /></button>
           </div>
         </div>
       ))}

@@ -2,8 +2,9 @@ body {
   background: url(food.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
   background-position: center;
+  
 }
 
 /* From Uiverse.io by alexmaracinaru */ 
@@ -73,6 +74,10 @@ body {
   border: none;
 }
 
+.iconTrash {
+  width: 12px;
+}
+
 .MyListHeading {
   font-family: "Encode Sans Semi Expanded", sans-serif;
   display: flex;
@@ -107,6 +112,10 @@ body {
 .App {
   display: flex;
   justify-content: space-around;
+}
+
+.iconIdea {
+  width: 30px;
 }
 
 .whole-plan {
@@ -196,4 +205,62 @@ textarea:hover {
   font-size: 24px;
   font-weight: 400;
   font-style: italic;
+}
+
+@media all and (max-width: 540px) {
+  .MyListHeading {
+    margin-bottom: 20px;
+  }
+
+  .MyListPar {
+    font-size: 10px;
+  }
+  
+  .MyListH1 {
+    font-size: 18px;
+    margin-left: 2px;
+    margin-right: 1px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  .dayMeals {
+    font-size: 10px;
+  }
+
+  .iconIdea {
+    width: 15px;
+  }
+
+  .parDefault {
+    font-size: 10px;
+    margin-top: 110px;
+  }
+
+  .myInput {
+    height: 40px;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+
+  textarea {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  .myInput, textarea {
+    margin-top: 18px;
+    margin-bottom: 25px;
+  }
+
+  .selected, .default {
+    margin: 1px;
+    min-height: 75px;
+  }
+
+  .iconTrash {
+    width: 10px;
+  }
 }

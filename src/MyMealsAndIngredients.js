@@ -9,7 +9,7 @@ const MyMealsAndIngredients = ({ selectedDay, updateDay }) => {
     })
   }
 
-  if (!selectedDay) return <p className="parDefault"><img src={idea} alt='Idea' width='30px' /> Plan your week ahead of time!</p>
+  if (!selectedDay) return <p className="parDefault"><img className='iconIdea' src={idea} alt='Idea' /> Plan your week ahead of time!</p>
   return <div className="whole-plan">
     <div className="MyListHeading">
       <p className="MyListPar">ON THE</p>
@@ -17,7 +17,7 @@ const MyMealsAndIngredients = ({ selectedDay, updateDay }) => {
       <p className="MyListPar">LIST</p>
     </div>
 
-    <div className="meal-editing">
+    <form className="meal-editing">
       <label>
         Day of the week:
         <input
@@ -51,8 +51,7 @@ const MyMealsAndIngredients = ({ selectedDay, updateDay }) => {
           onChange={(e) => editMyMeal("ingredients", e.target.value)}
         />
       </label>
-      
-    </div>
+    </form>
   </div>
 }
 
